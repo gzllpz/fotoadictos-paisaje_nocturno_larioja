@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Paisaje Nocturno de La Rioja - A.S. Fotoadictos La Rioja</title>
+    <style>
+      body, html{
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+      #map{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+  <script>
+    var iderioja_config = {
+      "init_lat": 42.4657,
+      "init_lng": -2.4532,
+      "capa_geojson": [
+        {"url": "https://raw.githubusercontent.com/gzllpz/fotoadictos-paisaje_nocturno_larioja/master/datos/paisaje_nocturno_larioja.geojson",
+         "icono": {
+            "iconUrl": "https://raw.githubusercontent.com/gzllpz/fotoadictos-paisaje_nocturno_larioja/master/iconos/photo_light.png",
+            "iconSize": [26,30],
+            "iconAnchor": [13,30]
+         }
+        }
+      ],
+      "cluster_markers": 1,
+      "localizacion": 1,
+      "popup": 2,
+      "selector_capas": 2
+    }
+  </script>
+  <script src="https://apigeo.larioja.org/v1/iderioja.js"></script>
+</html>
